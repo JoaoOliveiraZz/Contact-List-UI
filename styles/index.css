@@ -6,6 +6,7 @@
     --zinc-400: #a1a1aa;
     --zinc-300: #d4d4d8;
     --zinc-200: #e4e4e7;
+    --emerald-300: #6ee7b7;
 }
 
 *{
@@ -18,22 +19,40 @@
 html, body{
     font-family: 'Inter', sans-serif;
     background: var(--zinc-800);
-    height: 100vh;
     color: var(--zinc-200);
 }
 
 header{
-    width: 100%;
     height: 10%;
-    padding: 24px 144px;
+    margin: 20px 32px;
+    padding: 8px 0;
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-header nav{
+header nav, div{
     display: flex;
     align-items: center;
+}
+
+header nav{
+    gap: 20px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: var(--zinc-400);
+    font-weight: 500;
+}
+header nav a:hover{
+    color: var(--zinc-300);
+}
+
+header nav .active{
+    color: var(--zinc-300);
+}
+header div{
     gap: 12px;
 }
 
@@ -59,6 +78,7 @@ header nav h1{
     border: none;
     outline: none;
     color: var(--zinc-300);
+    font-size: 14px;
 }
 
 .search-bar input::placeholder{
@@ -67,5 +87,12 @@ header nav h1{
 }
 
 .search-bar i{
-    color: #6ee7b7;
+    color: var(--emerald-300);
+}
+
+.icon{
+    background: var(--emerald-300);
+    color: #000;
+    padding: 8px;
+    border-radius: 4px;
 }
